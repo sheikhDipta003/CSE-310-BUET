@@ -1,0 +1,4 @@
+	ScopeTable# 1
+	8--> <a,INT> 
+	9--> <b,FLOAT> 
+	10--> <c,STRING> 

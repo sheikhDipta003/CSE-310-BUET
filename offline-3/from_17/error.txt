@@ -1,0 +1,20 @@
+Line# 20: Multiple declaration of a in parameter
+Line# 42: Variable type cannot be void
+Line# 43: Multiple declaration of a
+Line# 43: Multiple declaration of c
+Line# 45: Undeclared function func
+Line# 48: Type mismatch c is an array
+Line# 48: Undeclared function correct_foo
+Line# 49: Undeclared function correct_foo
+Line# 50: Undeclared function correct_foo
+Line# 52: Undeclared variable k
+Line# 53: b not an array
+Line# 54: Expression inside third brackets not an integer
+Line# 55: Undeclared function foo4
+Line# 57: Undeclared function foo4
+Line# 58: Undeclared function foo4
+Line# 59: Type mismatch 
+Line# 60: Modulus by Zero
+Line# 61: Non-Integer operand on modulus operator
+Line# 63: Undeclared function foo5
+Line# 68: Undeclared variable h

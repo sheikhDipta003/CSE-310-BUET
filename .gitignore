@@ -1,0 +1,8 @@
+*.o
+*.exe
+*.out
+*.tab
+*.yy
+*.c
+*.gv
+.vscode/

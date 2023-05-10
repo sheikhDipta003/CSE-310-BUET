@@ -1,0 +1,561 @@
+type_specifier: INT
+declaration_list: ID
+declaration_list: declaration_list COMMA ID
+declaration_list: declaration_list COMMA ID
+var_declaration: type_specifier declaration_list SEMICOLON
+unit : var_declaration
+program : unit
+type_specifier: FLOAT
+declaration_list: ID
+var_declaration: type_specifier declaration_list SEMICOLON
+unit : var_declaration
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: INT
+parameter_list : parameter_list COMMA type_specifier ID
+func_declaration: type_specifier ID LPAREN parameter_list RPAREN SEMICOLON
+unit : func_declaration
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: INT
+parameter_list : parameter_list COMMA type_specifier ID
+func_declaration: type_specifier ID LPAREN parameter_list RPAREN SEMICOLON
+unit : func_declaration
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: INT
+parameter_list : parameter_list COMMA type_specifier ID
+7
+7
+7
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: FLOAT
+parameter_list : parameter_list COMMA type_specifier ID
+variable: ID
+a
+a
+a
+simple_expression: term
+3
+3
+3
+simple_expression: simple_expression ADDOP term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: VOID
+type_specifier: INT
+parameter_list : type_specifier ID
+variable: ID
+6
+6
+6
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: INT
+parameter_list : parameter_list COMMA type_specifier ID
+type_specifier: FLOAT
+parameter_list : parameter_list COMMA type_specifier ID
+variable: ID
+a
+a
+a
+simple_expression: term
+2
+2
+2
+simple_expression: simple_expression ADDOP term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: VOID
+type_specifier: INT
+parameter_list : type_specifier ID
+type_specifier: INT
+parameter_list : parameter_list COMMA type_specifier ID
+variable: ID
+7
+7
+7
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+variable: ID
+d
+d
+d
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: INT
+type_specifier: INT
+parameter_list : type_specifier ID
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: VOID
+type_specifier: INT
+parameter_list : type_specifier ID
+variable: ID
+a
+a
+a
+simple_expression: term
+3
+3
+3
+simple_expression: simple_expression ADDOP term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN parameter_list RPAREN
+unit : func_definition
+program : program unit
+type_specifier: INT
+type_specifier: INT
+declaration_list: ID
+declaration_list: declaration_list COMMA ID
+declaration_list: declaration_list COMMA ID LTHIRD CONST_INT RTHIRD
+declaration_list: declaration_list COMMA ID
+declaration_list: declaration_list COMMA ID
+var_declaration: type_specifier declaration_list SEMICOLON
+statement: var_declaration
+statements: statement
+type_specifier: VOID
+declaration_list: ID
+var_declaration: type_specifier declaration_list SEMICOLON
+statement: var_declaration
+statements: statements statement
+type_specifier: FLOAT
+declaration_list: ID
+declaration_list: declaration_list COMMA ID LTHIRD CONST_INT RTHIRD
+var_declaration: type_specifier declaration_list SEMICOLON
+statement: var_declaration
+statements: statements statement
+2.5
+2.5
+2.5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+2.5
+3.5
+3.5
+3.5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+2.5,3.5
+2.5,3.5
+func(2.5,3.5)
+func(2.5,3.5)
+func(2.5,3.5)
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a
+variable: ID
+c
+c
+c
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a,c
+a,c
+correct_foo(a,c)
+correct_foo(a,c)
+correct_foo(a,c)
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a
+a
+correct_foo(a)
+correct_foo(a)
+correct_foo(a)
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a
+variable: ID
+b
+b
+b
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a,b
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a,b,a
+a,b,a
+correct_foo(a,b,a)
+correct_foo(a,b,a)
+correct_foo(a,b,a)
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+5
+5
+5
+simple_expression: term
+2
+2
+2
+simple_expression: simple_expression ADDOP term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+5
+5
+5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+7
+7
+7
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+2.5
+2.5
+2.5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+8
+8
+8
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+0
+0
+0
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+2
+2
+2
+simple_expression: term
+5
+5
+5
+7
+7
+7
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+7
+7
+foo4(7)
+foo4(7)
+5*foo4(7)
+simple_expression: simple_expression ADDOP term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+1
+1
+1
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+5
+5
+5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+1
+1
+1
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+c[1]
+c[1]
+c[1]
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+c[1]
+c[1]
+foo4(c[1])
+foo4(c[1])
+foo4(c[1])
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+2
+2
+2
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+1
+1
+1
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+c[1]
+c[1]
+c[1]
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+c[1]
+c[1]
+foo4(c[1])
+foo4(c[1])
+foo4(c[1])
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+3
+3
+3
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+variable: ID LTHIRD expression RTHIRD
+2.7
+2.7
+2.7
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+5
+5
+5
+0
+0
+5%0
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+2
+2
+2
+3.5
+3.5
+2%3.5
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+variable: ID
+variable: ID
+a
+a
+a
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+a
+a
+foo5(a)
+foo5(a)
+foo5(a)
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: variable ASSIGNOP logic_expression
+expression_statement: expression SEMICOLON
+statement: expression_statement
+statements: statements statement
+statement: PRINTLN LPAREN ID RPAREN SEMICOLON
+statements: statements statement
+0
+0
+0
+simple_expression: term
+rel_expression: simple_expression
+logic_expression: rel_expression
+expression: logic_expression
+statement: RETURN expression SEMICOLON
+statements: statements statement
+compound_statement: LCURL dummy_scope_function statements RCURL
+func_definition : type_specifier ID LPAREN RPAREN
+unit : func_definition
+program : program unit
+start : program
